@@ -37,7 +37,7 @@ print(credits())  # remaining credits, free to call
 ```python
 from aigifmaker import Client
 
-gif = Client(api_key="sk-...", timeout=300)   # timeout in seconds, 5 minutes by default
+gif = Client(api_key="sk-...", timeout=900)   # timeout in seconds, 15 minutes by default
 url = gif.generate("a tiny dragon sneezing a puff of glitter")
 ```
 

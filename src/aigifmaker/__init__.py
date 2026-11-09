@@ -40,7 +40,7 @@ BASE_URL = "https://aigifmaker.ai"
 KEYS_URL = "https://aigifmaker.ai/settings/apikeys"
 PRICING_URL = "https://aigifmaker.ai/pricing"
 
-DEFAULT_TIMEOUT = 300.0
+DEFAULT_TIMEOUT = 900.0
 POLL_EVERY = 3.0
 
 
