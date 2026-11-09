@@ -13,6 +13,7 @@ Standard library only.
 
 from __future__ import annotations
 
+import http.client
 import json
 import os
 import time
@@ -20,7 +21,7 @@ import urllib.error
 import urllib.request
 from typing import Any, Callable, Dict, Optional, Tuple
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = [
     "Client",
     "generate",
@@ -169,7 +170,7 @@ class Client:
         while True:
             try:
                 data = self.status(task_id)
-            except OSError:
+            except (OSError, http.client.HTTPException):
                 data = {}  # a dropped poll is not a failed generation
             state = str(data.get("status") or "").lower()
             images = data.get("images") or []
